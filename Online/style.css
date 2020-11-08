@@ -3,6 +3,7 @@ button {
   width: 100%;
   background-color: blue;
   border-style: solid;
+  border-color: red;
 }
   
 strong {
