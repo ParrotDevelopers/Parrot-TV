@@ -5,3 +5,7 @@ button {
   border-style: solid;
   border-color: red;
 }
+
+strong {
+  font-size: 40px;
+}
