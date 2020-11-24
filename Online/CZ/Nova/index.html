@@ -1,42 +1,11 @@
-<html>
-<title>
- Nova | Parrot TV Beta
-</title>
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">  
-
-<body>
-<button onclick="playPause()">Play/Pause</button>
-<button onclick="reload()">Reload</button>
-<button onclick="makeLarge()">Large</button>
-<button onclick="makeSmall()">Small</button>
-<button onclick="makeNormal()">Normal</button>
-<br><br>
-<video id="videoPlayer" width="500">
-  <source src="https://nova-live.ssl.cdn.cra.cz/channels/nova_avod/playlist/cze/live_hq.m3u8" type="video/m3u8">
-  Your browser does not support HTML5 video.
-</video>
-</body>
-<html>
-
-<script> 
-var video = document.getElementById("videoPlayer");
-function playPause() { 
-    if (video.paused) 
-        video.play(); 
-    else 
-        video.pause(); 
-}
-function reload() { 
-   video.load(); 
-}
-function makeLarge() { 
-    video.width = 1000; 
-}
-function makeSmall() { 
-    video.width = 250; 
-} 
-function makeNormal() { 
-    video.width = 500; 
-} 
-</script>
+<html lang="en">
+    <head>
+        <meta charset=utf-8/>
+    </head>
+    <body>
+        <div id='player'>
+            <video width="352" height="288" src="https://nova-live.ssl.cdn.cra.cz/channels/nova_avod/playlist/cze/live_hq.m3u8" controls autoplay>
+            </video>
+        </div>
+    </body>
+</html>
