@@ -1,0 +1,39 @@
+<html>
+<title>
+ Nova | Parrot TV
+</title>
+<body>
+<button onclick="playPause()">Play/Pause</button>
+<button onclick="reload()">Reload</button>
+<button onclick="makeLarge()">Large</button>
+<button onclick="makeSmall()">Small</button>
+<button onclick="makeNormal()">Normal</button>
+<br><br>
+<video id="videoPlayer" width="500">
+  <source src="videos/codexworld.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</body>
+<html>
+
+<script> 
+var video = document.getElementById("videoPlayer");
+function playPause() { 
+    if (video.paused) 
+        video.play(); 
+    else 
+        video.pause(); 
+}
+function reload() { 
+   video.load(); 
+}
+function makeLarge() { 
+    video.width = 1000; 
+}
+function makeSmall() { 
+    video.width = 250; 
+} 
+function makeNormal() { 
+    video.width = 500; 
+} 
+</script>
