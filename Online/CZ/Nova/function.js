@@ -1,422 +1,517 @@
-/** Code By Webdevtrick ( https://webdevtrick.com ) **/
-@import url(https://weloveiconfonts.com/api/?family=fontawesome);
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
-body {
-  background: #e8eaed;
-  font: 16px/1.5 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-}
-img {
-  max-width: 100%;
-}
-h2 {
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.5);
-  transition: all 0.5s;
-}
-a:hover {
-  box-shadow: inset 0px -24px 0px #61b5d9;
-}
-.wrapper {
-  margin: 0 auto;
-  padding: 0 1em;
-  max-width: 69rem;
-}
-.truncate, .video-title, .single-video-title, .single-video-info {
-  box-sizing: border-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-}
-.video-area {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  color: #fff;
-  padding: 4.5rem 0;
-}
-.video-column {
-  float: left;
-  max-width: 854px;
-}
-.video-player {
-  background: #000;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 480px;
-}
-.video {
-  display: block;
-  cursor: pointer;
-  width: 100%;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.playlist {
-  float: right;
-  font-size: 18px;
-  font-weight: 600;
-  max-width: 250px;
-}
-.video-header {
-  background: #e60023;
-  line-height: 1.5rem;
-  padding: 1.5rem;
-}
-.video-title {
-  float: left;
-  margin: 0;
-  width: auto;
-  max-width: 75%;
-}
-.video-author {
-  font-size: 18px;
-  float: left;
-  margin-left: 3rem;
-}
-.description {
-  color: #212121;
-}
-.video-author a:hover {
-  box-shadow: inset 0px -24px 0px #212121;
-}
-.video-controls {
-  box-sizing: border-box;
-  background: rgb(33,33,33, 0.8);
-  line-height: 3rem;
-  padding: 0 1.5rem;
-  position: absolute;
-  bottom: 0;
-  -webkit-transform: translate3d(0, 3rem, 0);
-          transform: translate3d(0, 3rem, 0);
-  width: 100%;
-  height: 3rem;
-  vertical-align: middle;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-.video-controls button {
-  background: 0;
-  border: 0;
-  color: #fff;
-  font-size: 1.5rem;
-  width: 3rem;
-  height: 3rem;
-  vertical-align: middle;
-}
-.video-player:hover .video-controls {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-.video-bars {
-  background: rgb(33,33,33, 0.8);
-  display: inline-block;
-  margin: 0 1em;
-  position: relative;
-  width: 73%;
-  height: 8px;
-}
-.bar-seeker,
-.bar-progress,
-.bar-buffer {
-  position: absolute;
-  height: 8px;
-}
-.bar-seeker {
-  z-index: 1000;
-}
-.bar-progress {
-  z-index: 100;
-}
-.bar-buffer {
-  z-index: 10;
-}
-input[type=range] {
-  background: transparent;
-  cursor: pointer;
-  -webkit-appearance: none;
-  width: 100%;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-}
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-input[type=range]:focus {
-  outline: none;
-}
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-.bar-seeker::-ms-fill-lower {
-  background: transparent;
-}
-.bar-seeker::-ms-fill-upper {
-  background: transparent;
-}
-.bar-seeker::-webkit-slider-runnable-track {
-  background: transparent;
-  height: 8px;
-  padding: 0;
-}
-.bar-seeker::-moz-range-track {
-  background: transparent;
-  height: 8px;
-  padding: 0;
-}
-.bar-seeker::-ms-track {
-  background: transparent;
-  height: 8px;
-  padding: 0;
-}
-.bar-seeker::-webkit-slider-thumb {
-  background: #ff3c3c;
-  border: 0;
-  border-radius: 100%;
-  width: 18px;
-  height: 18px;
-  margin-top: -4px;
-}
-.bar-seeker::-moz-range-thumb {
-  background: #ff3c3c;
-  border: 0;
-  border-radius: 100%;
-  width: 18px;
-  height: 18px;
-  margin-top: -4px;
-}
-.bar-seeker::-ms-thumb {
-  background: #ff3c3c;
-  border: 0;
-  border-radius: 100%;
-  width: 18px;
-  height: 18px;
-  margin-top: -4px;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .bar-seeker {
-    height: 24px;
-    margin-top: -5px;
-    padding: 0;
-    vertical-align: middle;
-  }
-}
-input.slider-volume {
-  position: absolute;
-  bottom: 36px;
-  right: -40px;
-  width: 6rem;
-  opacity: 0;
-  -webkit-transform: rotate(-90deg) scaleX(0);
-          transform: rotate(-90deg) scaleX(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  transition: all 1s;
-}
-.slider-volume::-webkit-slider-runnable-track {
-  background: rgb(33,33,33, 0.8);
-  height: 20px;
-}
-.slider-volume::-moz-range-track {
-  background: rgb(33,33,33, 0.8);
-  height: 20px;
-}
-.slider-volume::-ms-track {
-  background: rgb(33,33,33, 0.8);
-  height: 20px;
-}
-.slider-volume::-webkit-slider-thumb {
-  background: #ff3c3c;
-  border: 0;
-  width: 8px;
-  height: 24px;
-  margin-top: -2px;
-}
-.slider-volume::-moz-range-thumb {
-  background: #ff3c3c;
-  border: 0;
-  width: 8px;
-  height: 24px;
-  margin-top: -2px;
-}
-.slider-volume::-ms-thumb {
-  background: #ff3c3c;
-  border: 0;
-  width: 8px;
-  height: 24px;
-  margin-top: -2px;
-}
-.btn-sound:hover + .slider-volume,
-.slider-volume:hover {
-  opacity: 1;
-  -webkit-transform: rotate(-90deg) scaleX(1);
-          transform: rotate(-90deg) scaleX(1);
-}
-progress {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.2);
-  border: none;
-  height: 8px;
-  width: 100%;
-}
-progress::-webkit-progress-bar {
-  background: transparent;
-}
-progress::-webkit-progress-value {
-  background: transparent;
-}
-.bar-buffer::-webkit-progress-value {
-  background: rgba(255, 255, 255, 0.2);
-}
-.bar-buffer::-moz-progress-bar {
-  background: rgba(255, 255, 255, 0.2);
-}
-.bar-progress::-webkit-progress-value {
-  background: #ff3c3c;
-}
-.bar-progress::-moz-progress-bar {
-  background: #ff3c3c;
-}
-.bar-progress {
-  color: #ff3c3c;
-}
-.btn-replay {
-  background: none;
-  border: none;
-  display: none;
-  color: #ff3c3c;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -110px;
-  margin-top: -110px;
-  font-size: 9rem;
-  width: 220px;
-  height: 220px;
-}
-.time-bubble {
-  background: #61b5d9;
-  border-radius: 1.5rem 1.5rem 0px;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  position: absolute;
-  bottom: 3.2rem;
-  left: 4.8rem;
-  padding: 0.5em;
-  display: none;
-}
-.next {
-  background: #212121;
-  padding: 16.5px;
-  max-height: 60px;
-}
-.next-video {
-  display: block;
-  height: 140px;
-  position: relative;
-  overflow: hidden;
-}
-.next-video img {
-  display: block;
-}
-.next-video::before {
-  background: linear-gradient(0deg, rgb(33,33,33, 0.8) 0%, transparent 60%);
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: all 0.5s;
-}
-.single-video-title {
-  position: absolute;
-  -webkit-transform: translateY(-4.5rem);
-          transform: translateY(-4.5rem);
-  padding: 0.75rem 1.5rem;
-  transition: all 0.5s;
-}
-.single-video-info {
-  box-sizing: border-box;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 0.75rem 1.5rem;
-  position: absolute;
-  -webkit-transform: translateY(-6.75rem);
-          transform: translateY(-6.75rem);
-  transition: all 0.5s;
-  opacity: 0;
-  width: 100%;
-}
-.next-video:hover .single-video-title {
-  -webkit-transform: translateY(-9.75rem);
-          transform: translateY(-9.75rem);
-}
-.next-video:hover::before {
-  background: rgb(33,33,33, 0.7);
-}
-.next-video:hover .single-video-info {
-  opacity: 1;
-}
-.played-video {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  height: 0;
-  width: 0;
-}
-.info-area {
-  background: #fff;
-  color: #212121;
-}
-.info-heading {
-  color: #61b5d9;
-  font-size: 3rem;
-  font-weight: 300;
-  text-align: center;
-  margin: 4.5rem auto;
-}
-.clearfix:before, .wrapper:before, .video-header:before, .clearfix:after, .wrapper:after, .video-header:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after, .wrapper:after, .video-header:after {
-  clear: both;
-}
-@-webkit-keyframes bottomSlide {
-  0% {
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes bottomSlide {
-  0% {
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+(function($) {
+ 
+    $.fn.videoPlayer = function(options) { // videoPlayer is the name of our plugin
+         
+                 
+        var settings = {  
+            playerWidth : '0.95', // Default is 95%
+            videoClass : 'video'  // Video Class
+        }
+         
+        // Extend the options so they work with the plugin
+        if(options) {
+            $.extend(settings, options);
+        }
+         
+         
+        // For each so that we keep chainability.
+        return this.each(function() {   
+ 
+                     // Code goes here
+ 
+        });
+     
+    }
+     
+})(jQuery)
+$(this)[0].addEventListener('loadedmetadata', function() {
+ 
+    // Basic Variables 
+    var $this = $(this);
+    var $settings = settings;
+     
+    // Wrap the video in a div with the class of your choosing
+    $this.wrap('<div class="'+$settings.videoClass+'"></div>');
+     
+ 
+    // Select the div we just wrapped our video in for easy selection.
+    var $that = $this.parent('.'+$settings.videoClass);
+     
+    // Some other misc variables to check when things are happening
+    var $mclicking = false, 
+        $vclicking = false, 
+        $vidhover = false,
+        $volhover = false, 
+        $playing = false, 
+        $drop = false,
+        $begin = false,
+        $draggingProgess = false,
+        $storevol,  
+        x = 0, 
+        y = 0, 
+        vtime = 0, 
+        updProgWidth = 0, 
+        volume = 0;
+        
+  // The Structure of our video player
+{
+ 
+$( '<div class="player">'
+     + '<div class="play-pause play">'
+       + '<span class="play-button">&#9658;</span>'
+       + '<div class="pause-button">'
+         + '<span> </span>'
+             + '<span> </span>'
+       + '</div>'
+     + '</div>'
+     + '<div class="progress">'
+       + '<div class="progress-bar">'
+         + '<div class="button-holder">'
+           + '<div class="progress-button"> </div>'
+         + '</div>'
+       + '</div>'
+       + '<div class="time">'
+         + '<span class="ctime">00:00</span>'
+         + '<span class="stime"> / </span>'
+         + '<span class="ttime">00:00</span>'
+       + '</div>'
+     + '</div>'
+     + '<div class="volume">'
+       + '<div class="volume-holder">'
+         + '<div class="volume-bar-holder">'
+           + '<div class="volume-bar">'
+             + '<div class="volume-button-holder">'  
+               + '<div class="volume-button"> </div>'
+             + '</div>'
+           + '</div>'
+         + '</div>'
+       + '</div>'
+       + '<div class="volume-icon v-change-0">'
+         + '<span> </span>'
+       + '</div>'
+     + '</div>'
+     + '<div class="fullscreen"> '
+       + '<a href="#"> </a>'
+     + '</div>'
+   + '</div>').appendTo($that);
+ 
+}
+ 
+ 
+// Set the width of the video
+$videoWidth = $this.width();
+$that.width($videoWidth+'px');
+ 
+// Set width of the player based on previously noted settings
+$that.find('.player').css({'width' : ($settings.playerWidth*100)+'%', 'left' : ((100-$settings.playerWidth*100)/2)+'%'});
+ 
+ 
+// Video information
+var $spc = $(this)[0], // Specific video
+    $duration = $spc.duration, // Video Duration
+    $volume = $spc.volume, // Video volume
+    currentTime;
+ 
+// The width of the progress bar
+var progWidth = $that.find('.progress').width();
+  
+  var bufferLength = function() {
+ 
+    // The buffered regions of the video
+    var buffered = $spc.buffered;
+     
+    // Rest all buffered regions everytime this function is run
+    $that.find('[class^=buffered]').remove();
+     
+    // If buffered regions exist
+    if(buffered.length > 0) {
+             
+        // The length of the buffered regions is i
+        var i = buffered.length;
+             
+        while(i--) {
+            // Max and min buffers
+            $maxBuffer = buffered.end(i);
+            $minBuffer = buffered.start(i);
+                     
+            // The offset and width of buffered area                
+            var bufferOffset = ($minBuffer / $duration) * 100;          
+            var bufferWidth = (($maxBuffer - $minBuffer) / $duration) * 100;
+                             
+            // Append the buffered regions to the video
+            $('<div class="buffered"></div>').css({"left" : bufferOffset+'%', 'width' : bufferWidth+'%'}).appendTo($that.find('.progress'));
+             
+        }
+    }
+} 
+ 
+// Run the buffer function
+bufferLength();
+ 
+// The timing function, updates the time.
+var timeUpdate = function($ignore) {
+     
+    // The current time of the video based on progress bar position
+    var time = Math.round(($('.progress-bar').width() / progWidth) * $duration);
+     
+    // The 'real' time of the video
+    var curTime = $spc.currentTime;
+     
+    // Seconds are set to 0 by default, minutes are the time divided by 60
+    // tminutes and tseconds are the total mins and seconds.
+    var seconds = 0,
+        minutes = Math.floor(time / 60),
+        tminutes = Math.round($duration / 60),
+        tseconds = Math.round(($duration) - (tminutes*60));
+     
+    // If time exists (well, video time)
+    if(time) {
+        // seconds are equal to the time minus the minutes
+        seconds = Math.round(time) - (60*minutes);
+         
+        // So if seconds go above 59
+        if(seconds > 59) {
+            // Increase minutes, reset seconds
+            seconds = Math.round(time) - (60*minutes);
+            if(seconds == 60) {
+                minutes = Math.round(time / 60); 
+                seconds = 0;
+            }
+        }
+         
+    } 
+     
+    // Updated progress width
+    updProgWidth = (curTime / $duration) * progWidth
+     
+    // Set a zero before the number if its less than 10.
+    if(seconds < 10) { seconds = '0'+seconds; }
+    if(tseconds < 10) { tseconds = '0'+tseconds; }
+     
+    // A variable set which we'll use later on
+    if($ignore != true) {
+        $that.find('.progress-bar').css({'width' : updProgWidth+'px'});
+        $that.find('.progress-button').css({'left' : (updProgWidth-$that.find('.progress-button').width())+'px'});
+    }
+     
+    // Update times
+    $that.find('.ctime').html(minutes+':'+seconds) 
+    $that.find('.ttime').html(tminutes+':'+tseconds);
+ 
+    // If playing update buffer value
+    if($spc.currentTime > 0 && $spc.paused == false && $spc.ended == false) {
+        bufferLength();
+    }
+     
+}
+ 
+// Run the timing function twice, once on init and again when the time updates.
+timeUpdate();
+$spc.addEventListener('timeupdate', timeUpdate);
+  
+  // When the user clicks play, bind a click event    
+$that.find('.play-pause').bind('click', function() {
+     
+    // Set up a playing variable
+    if($spc.currentTime > 0 && $spc.paused == false && $spc.ended == false) {
+        $playing = false;
+    } else { $playing = true; }
+     
+    // If playing, etc, change classes to show pause or play button
+    if($playing == false) {
+        $spc.pause();
+        $(this).addClass('play').removeClass('pause');
+        bufferLength();
+    } else {
+        $begin = true;
+        $spc.play();
+        $(this).addClass('pause').removeClass('play');
+    }               
+     
+});
+  
+  // Bind a function to the progress bar so the user can select a point in the video
+$that.find('.progress').bind('mousedown', function(e) {
+     
+    // Progress bar is being clicked
+    $mclicking = true;
+     
+    // If video is playing then pause while we change time of the video
+    if($playing == true) {
+        $spc.pause();
+    }
+     
+    // The x position of the mouse in the progress bar 
+    x = e.pageX - $that.find('.progress').offset().left;
+     
+    // Update current time
+    currentTime = (x / progWidth) * $duration;
+     
+    $spc.currentTime = currentTime;
+     
+});
+ 
+// When the user clicks on the volume bar holder, initiate the volume change event
+$that.find('.volume-bar-holder').bind('mousedown', function(e) {
+     
+    // Clicking of volume is true
+    $vclicking = true;
+     
+    // Y position of mouse in volume slider
+    y = $that.find('.volume-bar-holder').height() - (e.pageY - $that.find('.volume-bar-holder').offset().top);
+     
+    // Return false if user tries to click outside volume area
+    if(y < 0 || y > $(this).height()) {
+        $vclicking = false;
+        return false;
+    }
+     
+    // Update CSS to reflect what's happened
+    $that.find('.volume-bar').css({'height' : y+'px'});
+    $that.find('.volume-button').css({'top' : (y-($that.find('.volume-button').height()/2))+'px'});
+      
+    // Update some variables
+    $spc.volume = $that.find('.volume-bar').height() / $(this).height();
+    $storevol = $that.find('.volume-bar').height() / $(this).height();
+    $volume = $that.find('.volume-bar').height() / $(this).height();
+     
+    // Run a little animation for the volume icon.
+    volanim();
+     
+});
+ 
+// A quick function for binding the animation of the volume icon
+var volanim = function() {
+ 
+    // Check where volume is and update class depending on that.
+    for(var i = 0; i < 1; i += 0.1) {
+                     
+        var fi = parseInt(Math.floor(i*10)) / 10;
+        var volid = (fi * 10)+1;
+         
+        if($volume == 1) {
+            if($volhover == true) {
+                $that.find('.volume-icon').removeClass().addClass('volume-icon volume-icon-hover v-change-11');
+            } else {
+                $that.find('.volume-icon').removeClass().addClass('volume-icon v-change-11');
+            }
+        }
+        else if($volume == 0) {
+            if($volhover == true) {
+                $that.find('.volume-icon').removeClass().addClass('volume-icon volume-icon-hover v-change-1');
+            } else {
+                $that.find('.volume-icon').removeClass().addClass('volume-icon v-change-1');
+            }
+        }
+        else if($volume > (fi-0.1) && volume < fi && !$that.find('.volume-icon').hasClass('v-change-'+volid)) {
+            if($volhover == true) {
+                $that.find('.volume-icon').removeClass().addClass('volume-icon volume-icon-hover v-change-'+volid); 
+            } else {
+                $that.find('.volume-icon').removeClass().addClass('volume-icon v-change-'+volid);   
+            }
+        }       
+         
+    }
+}
+// Run the volanim function
+volanim();
+ 
+// Check if the user is hovering over the volume button
+$that.find('.volume').hover(function() {
+    $volhover = true;
+}, function() {
+    $volhover = false;
+});
+  
+  // For usability purposes then bind a function to the body assuming that the user has clicked mouse
+// down on the progress bar or volume bar
+$('body, html').bind('mousemove', function(e) {
+     
+    // Hide the player if video has been played and user hovers away from video
+    if($begin == true) {
+        $that.hover(function() {
+            $that.find('.player').stop(true, false).animate({'opacity' : '1'}, 0.5);
+        }, function() {
+            $that.find('.player').stop(true, false).animate({'opacity' : '0'}, 0.5);
+        });
+    }
+     
+    // For the progress bar controls
+    if($mclicking == true) {    
+         
+        // Dragging is happening
+        $draggingProgress = true;
+        // The thing we're going to apply to the CSS (changes based on conditional statements);
+        var progMove = 0;
+        // Width of the progress button (a little button at the end of the progress bar)
+        var buttonWidth = $that.find('.progress-button').width();
+         
+        // Updated x posititon the user is at
+        x = e.pageX - $that.find('.progress').offset().left;
+         
+        // If video is playing
+        if($playing == true) {
+            // And the current time is less than the duration               
+            if(currentTime < $duration) {        
+                // Then the play-pause icon should definitely be a pause button 
+                $that.find('.play-pause').addClass('pause').removeClass('play');
+            }
+        }
+         
+         
+        if(x < 0) { // If x is less than 0 then move the progress bar 0px
+            progMove = 0;
+            $spc.currentTime = 0;
+        } 
+        else if(x > progWidth) { // If x is more than the progress bar width then set progMove to progWidth
+            $spc.currentTime = $duration;
+            progMove = progWidth;   
+        }
+        else { // Otherwise progMove is equal to the mouse x coordinate
+            progMove = x;
+            currentTime = (x / progWidth) * $duration;
+            $spc.currentTime = currentTime; 
+        }
+         
+        // Change CSS based on previous conditional statement
+        $that.find('.progress-bar').css({'width' : $progMove+'px'});
+        $that.find('.progress-button').css({'left' : ($progMove-buttonWidth)+'px'});
+         
+    }
+     
+    // For the volume controls
+    if($vclicking == true) {    
+         
+        // The position of the mouse on the volume slider
+        y = $that.find('.volume-bar-holder').height() - (e.pageY - $that.find('.volume-bar-holder').offset().top);
+         
+        // The position the user is moving to on the slider.
+        var volMove = 0;
+         
+        // If the volume holder box is hidden then just return false
+        if($that.find('.volume-holder').css('display') == 'none') {
+            $vclicking = false;
+            return false;
+        }
+         
+        // Add the hover class to the volume icon
+        if(!$that.find('.volume-icon').hasClass('volume-icon-hover')) {
+            $that.find('.volume-icon').addClass('volume-icon-hover');
+        }
+         
+         
+        if(y < 0 || y == 0) { // If y is less than 0 or equal to 0 then volMove is 0.
+             
+            $volume = 0; 
+            volMove = 0;
+             
+            $that.find('.volume-icon').removeClass().addClass('volume-icon volume-icon-hover v-change-11');
+             
+        } else if(y > $(this).find('.volume-bar-holder').height() || (y / $that.find('.volume-bar-holder').height()) == 1) { // If y is more than the height then volMove is equal to the height
+             
+            $volume = 1; 
+            volMove = $that.find('.volume-bar-holder').height();
+             
+            $that.find('.volume-icon').removeClass().addClass('volume-icon volume-icon-hover v-change-1');
+             
+        } else { // Otherwise volMove is just y
+         
+            $volume = $that.find('.volume-bar').height() / $that.find('.volume-bar-holder').height();
+            volMove = y;
+             
+        }
+     
+        // Adjust the CSS based on the previous conditional statmeent
+        $that.find('.volume-bar').css({'height' : volMove+'px'});
+        $that.find('.volume-button').css({'top' : (volMove+$that.find('.volume-button').height())+'px'});
+         
+        // Run the animation function
+        volanim();
+         
+        // Change the volume and store volume
+        // Store volume is the volume the user last had in place
+        // in case they want to mute the video, unmuting will then
+        // return the user to their previous volume.
+        $spc.volume = $volume;
+        $storevol = $volume;
+         
+         
+    }
+     
+    // If the user hovers over the volume controls, then fade in or out the volume
+    // icon hover class
+     
+    if($volhover == false) {
+         
+        $that.find('.volume-holder').stop(true, false).fadeOut(100);
+        $that.find('.volume-icon').removeClass('volume-icon-hover');    
+         
+    }
+     
+    else {
+        $that.find('.volume-icon').addClass('volume-icon-hover');
+        $that.find('.volume-holder').fadeIn(100);           
+    }
+     
+         
+});
+ 
+// When the video ends the play button becomes a pause button
+$spc.addEventListener('ended', function() {
+     
+    $playing = false;
+     
+    // If the user is not dragging
+    if($draggingProgress == false) {
+        $that.find('.play-pause').addClass('play').removeClass('pause');
+    }
+     
+}); 
+  
+  // If the user clicks on the volume icon, mute the video, store previous volume, and then
+// show previous volume should they click on it again.
+$that.find('.volume-icon').bind('mousedown', function() {
+     
+    $volume = $spc.volume; // Update volume
+     
+    // If volume is undefined then the store volume is the current volume
+    if(typeof $storevol == 'undefined') {
+         $storevol = $spc.volume;
+    }
+     
+    // If volume is more than 0
+    if($volume > 0) {
+        // then the user wants to mute the video, so volume will become 0
+        $spc.volume = 0; 
+        $volume = 0;
+        $that.find('.volume-bar').css({'height' : '0'});
+        volanim();
+    }
+    else {
+        // Otherwise user is unmuting video, so volume is now store volume.
+        $spc.volume = $storevol;
+        $volume = $storevol;
+        $that.find('.volume-bar').css({'height' : ($storevol*100)+'%'});
+        volanim();
+    }
+     
+     
+});
+  
+  // If the user lets go of the mouse, clicking is false for both volume and progress.
+// Also the video will begin playing if it was playing before the drag process began.
+// We're also running the bufferLength function
+$('body, html').bind('mouseup', function(e) {
+     
+    $mclicking = false;
+    $vclicking = false;
+    $draggingProgress = false;
+     
+    if($playing == true) {  
+        $spc.play();
+    }
+     
+    bufferLength();
+     
+     
+});
