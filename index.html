@@ -1,91 +1,87 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Parrot TV</title>
-    </head>
+<head>
+    <title>Parrot TV</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    
-    <body>
-        
-               <br>
-               
-             <button class="glow-on-hover" type="button" onclick="window.location.href='/Channels/SK/';"><strong>SK Channels</strong></button>
-             <br>
-        <br>
-             <button class="glow-on-hover" type="button" onclick="window.location.href='/Channels/CZ/';"><strong>CZ Channels</strong></button>
-
-        
-    </body>
-    
-</html>
-
 <style>
-        
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-}
+   body {
+      font-family: Arial;
+      color: white;
+   }
+   h1{
+      padding:20px;
+   }
+   .left,.right {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+   }
+   .left {
+      left: 0;
+      background-color: rgb(36, 0, 95);
+   }
+   .right {
+      right: 0;
+      background-color: rgb(56, 1, 44);
+   }
+   .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+   }
+   .centered img {
+      width: 150px;
+      border-radius: 50%;
+   }
+    
+    .live {
+          display: block;
+  margin-left: auto;
+  margin-right: auto;
+        top: -500px;
+        text-align: center;
+        font-size: 200px;
+    }
+  
+        .livet {
+                      display: block;
+  margin-left: auto;
+  margin-right: auto;
+        top: -500px;
+        text-align: center;
+       color: black;
+       font-size: 150px;
+            
+        }
 
-.glow-on-hover {
-    width: 99%;
-    height: 60px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
+            .livet2 {
+                      display: block;
+  margin-left: auto;
+  margin-right: auto;
+        top: -500px;
+        text-align: center;
+       color: black;
+       font-size: 100px;
+            
+        }
+   
 </style>
+</head>
+<body>
+<div class="left">
+    <a  href="/TV"><img class="live" border="0" alt="Live TV" src="http://cdn.onlinewebfonts.com/svg/img_375207.png" width="320px" height="320px"></a><br>
+    <a href="/TV"> <h1 class="livet">Live TV</h1> </a>
+</div>
+<div class="right">
+<a href="/Other"><img class="live" border="0" alt="Other" src="https://cdn3.iconfinder.com/data/icons/glypho-movie-and-video/64/user-presentation-movie-film-cinema-256.png" width="320px" height="320"></a><br>
+    <a href="/Other"> <h1 class="livet2">TV Shows, Movies, Radio</h1> </a>
+</div>
+</body>
+</html>
