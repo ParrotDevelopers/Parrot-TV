@@ -1,87 +1,101 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Parrot TV</title>
+    <head>
+    <meta name="keywords" content="Parrot TV, Free CZ/SK TV, Live TV, Ziva TV, CZ Filmy, SK Filmy, Parrot TV Kodi, CZ TV Kodi, SK TV Kodi, Kodi Filmy, Kodi Movies, Kodi Seriali, Kodi TV Shows, US TV, CZ SK Radio"/>
+    </head>
+    <body>
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-<style>
-   body {
-      font-family: Arial;
-      color: white;
-   }
-   h1{
-      padding:20px;
-   }
-   .left,.right {
-      height: 100%;
-      width: 50%;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      overflow-x: hidden;
-      padding-top: 20px;
-   }
-   .left {
-      left: 0;
-      background-color: rgb(36, 0, 95);
-   }
-   .right {
-      right: 0;
-      background-color: rgb(56, 1, 44);
-   }
-   .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-   }
-   .centered img {
-      width: 150px;
-      border-radius: 50%;
-   }
-    
-    .live {
-          display: block;
-  margin-left: auto;
-  margin-right: auto;
-        top: -500px;
-        text-align: center;
-        font-size: 200px;
-    }
-  
-        .livet {
-                      display: block;
-  margin-left: auto;
-  margin-right: auto;
-        top: -500px;
-        text-align: center;
-       color: black;
-       font-size: 150px;
-            
-        }
-
-            .livet2 {
-                      display: block;
-  margin-left: auto;
-  margin-right: auto;
-        top: -500px;
-        text-align: center;
-       color: black;
-       font-size: 100px;
-            
-        }
-   
-</style>
-</head>
-<body>
-<div class="left">
-    <a  href="/TV.html"><img class="live" border="0" alt="Live TV" src="http://cdn.onlinewebfonts.com/svg/img_375207.png" width="320px" height="320px"></a><br>
-    <a href="/TV.html"> <h1 class="livet">Live TV</h1> </a>
+<div class="topnav" id="myTopnav">
+  <a href="/" class="active">Home</a>
+  <a href="/LiveTV.html">Live TV</a>
+  <a href="/Movies.html">Movies</a>
+  <a href="/TVShows.html">TV Shows</a>
+    <a href="/Download.html">Download</a>
+    <a href="/Support.html">Support</a>
+    <a href="/TOS.html">Terms Of Use / DMCA</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
-<div class="right">
-<a href="/Other"><img class="live" border="0" alt="Other" src="https://cdn3.iconfinder.com/data/icons/glypho-movie-and-video/64/user-presentation-movie-film-cinema-256.png" width="320px" height="320"></a><br>
-    <a href="/Other"> <h1 class="livet2">TV Shows, Movies, Radio</h1> </a>
-</div>
-</body>
+    </body>
 </html>
+
+
+<style>
+    /*Body */
+    body {
+        background-color: #393939;
+    }
+    
+    
+    /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: lightskyblue;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: 	#00097a;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+</style>
+
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
