@@ -30,7 +30,7 @@
         
        
              <div id="shadowBox">
-    <h3 class="rainbow rainbow_text_animated"> -CZ Channels</h3>
+    <h3 class="rainbow rainbow_text_animated_r"> -CZ Channels</h3>
 </div> 
         <div class="SB"><br>
             <br>
@@ -204,7 +204,28 @@ color: blue;
     animation: rainbow_animation 6s ease-in-out infinite;
     background-size: 400% 100%;
 }
+	
+/* -------------------------- Text 2 ----------------------*/	
 
+	.rainbow_text_animated_r {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+	@keyframes rainbow_animation_r {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    10% {
+        background-position: 100% 0;
+    }
+}
+	
 @keyframes rainbow_animation {
     0%,100% {
         background-position: 0 0;
