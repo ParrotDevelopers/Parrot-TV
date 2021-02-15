@@ -3,7 +3,7 @@
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <meta charset="utf-8">
-    <title>Parrot TV | Download</title>
+    <title>Parrot TV Download Kodi</title>
   </head>
     
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -11,7 +11,7 @@
 
 <div class="topnav" id="myTopnav">
   <a href="/" >Home</a>
-  <a href="/TV/">Live TV</a>
+  <a href="/TV.html">Live TV</a>
     <a href="/Download.html" class="active">Download</a>
     <a href="/Support.html">Support</a>
     <a href="/TOS.html">Terms Of Use / DMCA</a>
@@ -19,16 +19,16 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
-
+        
+    
     
   <body>
-          <div class="PTVK">
-      <h1>Download Parrot TV Kodi</h1>
-    </div> <br>
-
+        <div id="shadowBox">
+    <h3 class="rainbow rainbow_text_animated">Parrot TV Download</h3>
+</div> 
 
         
-    </div>
+    
 
       <div class="text1"> <br class="beforetx">
                     <h6 class="LineO">1. Install kodi from <a href="https://kodi.tv">Kodi.tv</a></h6>
@@ -73,7 +73,7 @@
         .LineT {
         color: azure;
         left: 5%;
-        top: 200px;
+        top: 210px;
         margin-top: 30px;
         font-size: 30px;
         position: fixed;
@@ -81,7 +81,7 @@
         .LineTH {
         color: azure;
         left: 5%;
-        top: 250px;
+        top: 300px;
         margin-top: 30px;
         font-size: 30px;
         position: fixed;
@@ -89,7 +89,7 @@
         .LineF {
         color: azure;
         left: 5%;
-        top: 330px;
+        top: 380px;
         margin-top: -5px;
         font-size: 30px;
         position: fixed;
@@ -146,23 +146,7 @@ body{
   margin: 0;
   padding: 0;
 }
-.center{
-  position: fixed;
-  top: 19%;
-  left: 23%;
-  transform: translate(-50%, -50%);
-}
-.center h1{
-  user-select: none;
-  font-size: 50px;
-  color: white;
-  background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
-              rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-  background-size: 600vw 600vw;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: slide 10s linear infinite forwards;
-}
+
 @keyframes slide {
   0%{
     background-position-x: 0%;
@@ -172,23 +156,6 @@ body{
   }
 }
 
-    .PTVK{
-  position: absolute;
-  top: 21%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.PTVK h1{
-  user-select: none;
-  font-size: 50px;
-  color: white;
-  background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
-              rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-  background-size: 600vw 600vw;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: slide 10s linear infinite forwards;
-}
 @keyframes slide {
   0%{
     background-position-x: 0%;
@@ -203,7 +170,7 @@ body{
 /*------------------------ Download Button ---------------------------*/
 .glow-on-hover {
             left: 5%;
-     top: 405px;
+     top: 330px;
     margin-top: 30px;     
     width: 91%;
     height: 70px;
@@ -322,7 +289,42 @@ body{
   }
 }
 
+    /* ----------------------------------------- Animated TExt ------------------------- */
     
+        #shadowBox {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    border: 3px solid;
+}
+
+.rainbow {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 50px;
+    font-family: monospace;
+    letter-spacing: 5px;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
     
 </style>
     
